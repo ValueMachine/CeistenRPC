@@ -12,6 +12,8 @@
         <module>Consumer</module>
         <module>Provider</module>
         <module>Consumer</module>
+        <module>ProviderCommon</module>
+        <module>Ceistenrpc</module>
     </modules>
 
     <properties>

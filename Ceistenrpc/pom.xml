@@ -8,7 +8,9 @@
         <artifactId>CeistenRPC</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
-    <artifactId>Provider</artifactId>
+
+    <groupId>org.example</groupId>
+    <artifactId>Ceistenrpc</artifactId>
 
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
@@ -17,15 +19,9 @@
     </properties>
     <dependencies>
         <dependency>
-            <groupId>Ceisten</groupId>
-            <artifactId>ProviderCommon</artifactId>
-            <version>1.0-SNAPSHOT</version>
+            <groupId>org.apache.tomcat.embed</groupId>
+            <artifactId>tomcat-embed-core</artifactId>
+            <version>8.5.31</version>
         </dependency>
-        <dependency>
-            <groupId>org.example</groupId>
-            <artifactId>Ceistenrpc</artifactId>
-            <version>1.0-SNAPSHOT</version>
-        </dependency>
-
-            </dependencies>
+    </dependencies>
 </project>
