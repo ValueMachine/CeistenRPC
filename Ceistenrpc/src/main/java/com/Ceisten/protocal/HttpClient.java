@@ -12,7 +12,9 @@ import java.net.MalformedURLException;
 import java.net.URL;
 
 public class HttpClient {
+    public HttpClient(){
 
+    }
     public String send(String hostname, Integer port, Invocation invocation) throws IOException {
         //这里发送一个http请求，也可以读取用户配置
         try {

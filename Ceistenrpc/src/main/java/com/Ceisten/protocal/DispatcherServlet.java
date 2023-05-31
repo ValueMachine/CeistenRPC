@@ -8,8 +8,10 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 public class DispatcherServlet extends HttpServlet {
+    public DispatcherServlet() {
+    }
     @Override
     protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-           new HttpServerHandler().handle(req, resp);
+        (new HttpServerHandler()).handle(req, resp);
     }
 }

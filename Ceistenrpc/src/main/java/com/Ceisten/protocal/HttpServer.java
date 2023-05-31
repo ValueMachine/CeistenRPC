@@ -8,8 +8,10 @@ import org.apache.catalina.core.StandardHost;
 import org.apache.catalina.startup.Tomcat;
 
 public class HttpServer {
-
+    public HttpServer() {
+    }
     public void start(String hostname, Integer port) {
+
             //读取用户配置 server.name
         Tomcat tomcat = new Tomcat();
         Server server = tomcat.getServer();

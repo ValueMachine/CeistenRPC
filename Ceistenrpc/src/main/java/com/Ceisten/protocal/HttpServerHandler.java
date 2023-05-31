@@ -12,7 +12,8 @@ import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
 public class HttpServerHandler {
-
+    public HttpServerHandler() {
+    }
     public void handle(HttpServletRequest req, HttpServletResponse resp) {
         //处理请求-->接口、方法、方法参数
         //反序列化
@@ -23,18 +24,18 @@ public class HttpServerHandler {
             Method method = classImpl.getMethod(invocation.getMethodName(), invocation.getParametersTypes());
             String result = (String) method.invoke(classImpl.newInstance(), invocation.getParameters());
             IOUtils.write(result, resp.getOutputStream());
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        } catch (ClassNotFoundException e) {
-            throw new RuntimeException(e);
-        } catch (NoSuchMethodException e) {
-            throw new RuntimeException(e);
-        } catch (InvocationTargetException e) {
-            throw new RuntimeException(e);
-        } catch (IllegalAccessException e) {
-            throw new RuntimeException(e);
-        } catch (InstantiationException e) {
-            throw new RuntimeException(e);
+        } catch (IOException var8) {
+            var8.printStackTrace();
+        } catch (ClassNotFoundException var9) {
+            var9.printStackTrace();
+        } catch (NoSuchMethodException var10) {
+            var10.printStackTrace();
+        } catch (InvocationTargetException var11) {
+            var11.printStackTrace();
+        } catch (IllegalAccessException var12) {
+            var12.printStackTrace();
+        } catch (InstantiationException var13) {
+            var13.printStackTrace();
         }
 
     }
